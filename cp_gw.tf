@@ -5,6 +5,7 @@ data "template_file" "userdata_setup" {
 
   vars  = {
     sic_key       = "${var.sic_key}"
+    hostname      ="${var.company}-gw"
     logic = "${file("gw-bootstrap.sh")}"
   }
 }
